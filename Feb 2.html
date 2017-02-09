@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Feb 2</title>
+
+	</head>
+	
+	<body>
+		
+			<h3>Request</h3>
+			
+			<p>Request Line (CRLF - terminated line consiting of three space-seperated)</p>
+			
+			<ul>
+				<li>Method - indicates the method to be performed on the resource identified by the Request-URI.
+				The method is case-sensitive.</li>
+				<li>Request URI - a Uniform Resource Identifier and identifies the resource upon which to apply the request.</li>
+				<li>HTTP Protocol Version -  is an application protocol for distributed, collaborative, and hypermedia information systems.
+				HTTP is the foundation of data communication for the World Wide Web.</li>
+			</ul>
+			
+			<p>Message header (general, request, and/or entity headers)</p>
+			
+			<ul>
+				<li>HTTP 1.1 requires at least the Host request header to be provided.</li>
+			</ul>
+			
+			<p>Empty Line  (i.e., a line with nothing preceding the CRLF) indicating the end of the header fields.</p>
+			
+			<p>Message Body aka. Payload(optional) - is used to carry the entity-body associated with the request or response.
+			The message-body differs from the entity-body only when a transfer-coding has been applied,
+			as indicated by the Transfer-Encoding header field </p>
+			
+			<h3>HTTP Respond Message</h3>
+			
+			<p>Status Line - consisting of the protocol version followed by a numeric status code and its associated textual phrase,
+			with each element separated by SP characters. No CR or LF is allowed except in the final CRLF sequence.</p>
+			
+			<ul>
+				<li>HTTP Protocol Version -  is intended to allow the sender to indicate the format of a message and its capacity for
+				understanding further HTTP communication, rather than the features obtained via that communication.</li>
+				<li>Status Code - is a 3-digit integer result code of the attempt to understand and satisfy the request. </li>
+				<li>Reason Phrase - is intended to give a short textual description of the Status-Code.</li>
+			</ul>
+			
+			<p>Message Headers</p>
+			
+			<ul>
+				<li>1xx: Informational - Request received, continuing process</li>
+			</ul>
+			
+			<ol>
+				<li>"100" : Continue</li>
+				<li>"101" : Switching Protocols</li>
+			</ol>
+			
+			<ul>
+				<li>2xx: Success - The action was successfully received, understood, and accepted</li>
+			</ul>
+			
+			<ol>
+				<li>"200" : OK</li>
+				<li>"201" : Created</li>
+				<li>"202" : Accepted</li>
+				<li>"203" : Non-Authoritative Information</li>
+				<li>"204" : No Content</li>
+				<li>"205" : Reset Content</li>
+				<li>"206" : Partial Content</li>
+			</ol>
+			
+			<ul>
+				<li>3xx: Redirection - Further action must be taken in order to complete the request</li>
+			</ul>
+			
+			<ol>
+				<li>"300" : Multiple Choices</li>
+				<li>"301" : Moved Permanently</li>
+				<li>"302" : Found</li>
+				<li>"303" : See Other</li>
+				<li>"304" : Not Modified</li>
+				<li>"204" : No Content</li>
+				<li>"305" : Use Proxy</li>
+				<li>"307" : Temporary Redirect</li>
+			</ol>
+			
+			<ul>
+				<li>4xx: Client Error - The request contains bad syntax or cannot be fulfilled</li>
+			</ul>
+			
+			<ol>
+				<li>"400" : Bad Request</li>
+				<li>"401" : Unauthorized</li>
+				<li>"402" : Payment Required</li>
+				<li>"403" : Forbidden</li>
+				<li>"404" : Not Found</li>
+				<li>"405" : Method Not Allowed</li>
+				<li>"406" : Not Acceptable</li>
+				<li>"407" : Proxy Authentication Required</li>
+				<li>"408" : Request Time-out</li>
+				<li>"409" : Conflict</li>
+				<li>"410" : Gone</li>
+				<li>"411" : Length Required</li>
+				<li>"412" : Precondition Failed</li>
+				<li>"413" : Request Entity Too Large</li>
+				<li>"414" : Request-URI Too Large</li>
+				<li>"415" : Unsupported Media Type</li>
+				<li>"416" : Requested range not satisfiable</li>
+				<li>"417" : Expectation Failed</li>
+			</ol>
+			
+			<ul>
+				<li>Server Error - The server failed to fulfill an apparently valid request</li>
+			</ul>
+			
+			<ol>
+				<li>"500" : Internal Server Error</li>
+				<li>"501" : Not Implemented</li>
+				<li>"502" : Bad Gateway</li>
+				<li>"503" : Service Unavailable</li>
+				<li>"504" : Gateway Time-out</li>
+				<li>"505" : HTTP Version not supported</li>
+			</ol>
+			
+			<p>Empty Line  (i.e., a line with nothing preceding the CRLF) indicating the end of the header fields.</p>
+			
+			<p>Message Body aka. Payload(optional) - is used to carry the entity-body associated with the request or response.
+			The message-body differs from the entity-body only when a transfer-coding has been applied,
+			as indicated by the Transfer-Encoding header field </p>
+			
+			<h3>HTTP Respond Methods</h3>
+			
+			<p>Standard Method - The set of common methods for HTTP/1.1.
+			Although this set can be expanded, additional methods cannot be assumed to share the same semantics for separately
+			extended clients and servers.</p>
+			
+			<ul>
+				<li>Get</li>
+				<li>Head</li>
+				<li>Post</li>
+				<li>Put</li>
+				<li>Delete</li>
+				<li>Options</li>
+				<li>Trace</li>
+				<li>Connect</li>
+			</ul>
+			
+			<p>Extension Methods - safe methods, idempotend method, cacheable method.
+			Example is WebDAV (RFC 4918) - Profind, Propatch, Mkcol, Copy, Move, Lock, Unlock.</p>
+			
+			<p>Standard Method</p>
+			
+			<ul>
+				<li>Get - means retrieve whatever information (in the form of an entity) is identified by the Request-URI.
+				If the Request-URI refers to a data-producing process, it is the produced data which shall be returned as
+				the entity in the response and not the source text of the process, unless that text happens to be the output
+				of the process.</li>
+				<li>Head - is identical to GET except that the server MUST NOT return a message-body in the response.
+				The metainformation contained in the HTTP headers in response to a HEAD request SHOULD be identical to
+				the information sent in response to a GET request. This method can be used for obtaining metainformation
+				about the entity implied by the request without transferring the entity-body itself. This method is often
+				used for testing hypertext links for validity, accessibility, and recent modification.</li>
+				<li>Post - s used to request that the origin server accept the entity enclosed in the request as
+				a new subordinate of the resource identified by the Request-URI in the Request-Line.</li>
+				<li>Put - requests that the enclosed entity be stored under the supplied Request-URI.
+				If the Request-URI refers to an already existing resource, the enclosed entity SHOULD be
+				considered as a modified version of the one residing on the origin server.</li>
+				<li>Delete - requests that the origin server delete the resource identified by the Request-URI.
+				This method MAY be overridden by human intervention (or other means) on the origin server.
+				The client cannot be guaranteed that the operation has been carried out, even if the status code returned
+				from the origin server indicates that the action has been completed successfully.</li>
+			</ul>
+			
+			<p>References: </p>
+			
+			<ul>
+				<li>https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html</li>
+				<li>https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol</li>
+				<li>https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html</li>
+				<li>https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html</li>
+				<li>https://www.w3.org/Protocols/rfc2616/rfc2616.html</li>
+				<li>https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.1</li>
+				<li>https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</li>
+				<li>https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</li>
+			</ul>
+			
+	</body>
+
+</html>
