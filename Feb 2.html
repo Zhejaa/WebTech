@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>Feb 2</title>
+		<title>Feb 6</title>
 
 	</head>
 	
@@ -169,6 +169,15 @@
 				This method MAY be overridden by human intervention (or other means) on the origin server.
 				The client cannot be guaranteed that the operation has been carried out, even if the status code returned
 				from the origin server indicates that the action has been completed successfully.</li>
+				<li>Options - method represents a request for information about the communication options available on the
+				request/response chain identified by the Request-URI. This method allows the client to determine the options
+				and/or requirements associated with a resource, or the capabilities of a server, without implying a resource
+				action or initiating a resource retrieval.</li>
+				<li>Trace - method is used to invoke a remote, application-layer loop- back of the request message. The final
+				recipient of the request SHOULD reflect the message received back to the client as the entity-body of a 200
+				(OK) response. The final recipient is either the origin server or the first proxy or gateway to receive a Max-Forwards
+				value of zero (0) in the request. A TRACE request MUST NOT include an entity..</li>
+				<li>Connect - this specification reserves the method name CONNECT for use with a proxy that can dynamically switch to being a tunnel .</li>
 			</ul>
 			
 			<p>References: </p>
