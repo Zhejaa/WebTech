@@ -8,7 +8,7 @@
 	
 	<body>
 		
-			<h3>Request</h3>
+			<h1>Request</h1>
 			
 			<p>Request Line (CRLF - terminated line consiting of three space-seperated)</p>
 			
@@ -20,7 +20,7 @@
 				HTTP is the foundation of data communication for the World Wide Web.</li>
 			</ul>
 			
-			<p>Message header (general, request, and/or entity headers)</p>
+			<h2>Message header (general, request, and/or entity headers)</h2>
 			
 			<ul>
 				<li>HTTP 1.1 requires at least the Host request header to be provided.</li>
@@ -49,78 +49,22 @@
 			<ul>
 				<li>1xx: Informational - Request received, continuing process</li>
 			</ul>
-			
-			<ol>
-				<li>"100" : Continue</li>
-				<li>"101" : Switching Protocols</li>
-			</ol>
-			
+						
 			<ul>
 				<li>2xx: Success - The action was successfully received, understood, and accepted</li>
-			</ul>
-			
-			<ol>
-				<li>"200" : OK</li>
-				<li>"201" : Created</li>
-				<li>"202" : Accepted</li>
-				<li>"203" : Non-Authoritative Information</li>
-				<li>"204" : No Content</li>
-				<li>"205" : Reset Content</li>
-				<li>"206" : Partial Content</li>
-			</ol>
+			</ul>			
 			
 			<ul>
 				<li>3xx: Redirection - Further action must be taken in order to complete the request</li>
-			</ul>
-			
-			<ol>
-				<li>"300" : Multiple Choices</li>
-				<li>"301" : Moved Permanently</li>
-				<li>"302" : Found</li>
-				<li>"303" : See Other</li>
-				<li>"304" : Not Modified</li>
-				<li>"204" : No Content</li>
-				<li>"305" : Use Proxy</li>
-				<li>"307" : Temporary Redirect</li>
-			</ol>
+			</ul>			
 			
 			<ul>
 				<li>4xx: Client Error - The request contains bad syntax or cannot be fulfilled</li>
-			</ul>
-			
-			<ol>
-				<li>"400" : Bad Request</li>
-				<li>"401" : Unauthorized</li>
-				<li>"402" : Payment Required</li>
-				<li>"403" : Forbidden</li>
-				<li>"404" : Not Found</li>
-				<li>"405" : Method Not Allowed</li>
-				<li>"406" : Not Acceptable</li>
-				<li>"407" : Proxy Authentication Required</li>
-				<li>"408" : Request Time-out</li>
-				<li>"409" : Conflict</li>
-				<li>"410" : Gone</li>
-				<li>"411" : Length Required</li>
-				<li>"412" : Precondition Failed</li>
-				<li>"413" : Request Entity Too Large</li>
-				<li>"414" : Request-URI Too Large</li>
-				<li>"415" : Unsupported Media Type</li>
-				<li>"416" : Requested range not satisfiable</li>
-				<li>"417" : Expectation Failed</li>
-			</ol>
+			</ul>			
 			
 			<ul>
 				<li>Server Error - The server failed to fulfill an apparently valid request</li>
-			</ul>
-			
-			<ol>
-				<li>"500" : Internal Server Error</li>
-				<li>"501" : Not Implemented</li>
-				<li>"502" : Bad Gateway</li>
-				<li>"503" : Service Unavailable</li>
-				<li>"504" : Gateway Time-out</li>
-				<li>"505" : HTTP Version not supported</li>
-			</ol>
+			</ul>			
 			
 			<p>Empty Line  (i.e., a line with nothing preceding the CRLF) indicating the end of the header fields.</p>
 			
@@ -148,7 +92,7 @@
 			<p>Extension Methods - safe methods, idempotend method, cacheable method.
 			Example is WebDAV (RFC 4918) - Profind, Propatch, Mkcol, Copy, Move, Lock, Unlock.</p>
 			
-			<p>Standard Method</p>
+			<h3>Standard Method</h3>
 			
 			<ul>
 				<li>Get - means retrieve whatever information (in the form of an entity) is identified by the Request-URI.
