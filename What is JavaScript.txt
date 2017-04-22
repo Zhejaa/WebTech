@@ -1,0 +1,10 @@
+JavaScript
+-it is a programming language and it has many uses and it is easy to learn.
+
+•	 make websites respond to user interaction
+•	 build apps and games (e.g. blackjack)
+•	 access information on the Internet (e.g. find out the top trending words on Twitter by topic)
+•	 organize and present data (e.g. automate spreadsheet work; data visualization)
+
+-developed in 1995 by Brendan Eich
+-it is a scripting language for the Netscape Navigator Browser
