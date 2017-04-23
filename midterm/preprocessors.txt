@@ -1,0 +1,22 @@
+CSS PREPROCESSORS
+	Pre-processors, with their advanced features, helped to achieve writing reusable, maintainable and extensible codes in CSS. By using a pre-processor, you can easily increase your productivity, and decrease the amount of code you are writing in a project.
+
+	Variables
+-	All time features for CSS
+-	div {
+    		font-size: 16px;
+	}
+
+	Nesting
+-	Nesting provides a visual hierarchy as in the HTML and increases the readability.
+-	ul { margin: 0; }
+	ul li { float: left; }
+	ul a { color: #999; }
+	ul a:hover { color: #229ed3; }
+
+	Extends
+-	Extends are useful for sharing a generic definition with selectors rather than copying it in. All extended selectors are grouped in compiled CSS.
+-	.block, p, ul, ol { margin: 10px 5px; }
+
+	p { border: 1px solid #eee; }
+	ul, ol { color: #333; text-transform: uppercase; }
