@@ -1,0 +1,112 @@
+ARRAYS - dunamically sized
+2 wars: array object constructor
+			var emptyArray = new Array();
+		array literal syntax
+			var alsoEmptyArray = [];
+		- storage is NOT allocated statically
+e.g. var arrayWithLengthFive = new array(5);
+	 var arrayWithOneElementWithValueFive = [5];
+e.g. var mixedElement = [10, true, 'hi', new Date()];
+	 var matrix = new Array(){
+			new Array = (1, 2, 3, 4)
+			new Array = (5, 6, 7, 8)
+			new Array = (9, 10, 11 12)
+		}
+		try: table(matrix)
+e.g. var multiDimArray {
+	['apple', 'banana', 'orange', [ 4, 5, 6, [7, 8, 9], true, false, false], []
+}
+e.g array destructuring:
+	var array = [1, 2, 3, 4, 5]; -\		value of a: 1
+									- 	value of b: 2
+	var [a b, c, d, e] = array;	 -/		value of c: 3
+										value of d: 4
+										value of e: 5
+	var [m, n, ...others] = array; - m: value 1, n = value 2, others = array
+	var [, x, y] = array;
+		\-> skip 1st element
+			\-> skip 3rd and 4th element
+e.g.array indeces can be non-contiguous
+	var array = [1, 2, 3, 4, 5]
+	array [10] = 10;
+	for (let i in array){ <- if this is an array, it will strep into indices one at a time
+		console.log(i, array[i]);
+	}
+e.g. function (a, b){
+		a = 10;
+		b = 20;
+		[a, b] = [b, a]
+	}
+e.g.var array = [1, 2, 3];
+	array.length = 10; (7 undefined slots available)
+	array[array.length] = 4;
+	var newLength = array.push(5);
+	var firstElement = array.shift (0); remove and adjust
+	array.reverse(); >> 5 4 undefined 3 2
+	var elementsRemoved = array.splice (2, 3, 'a', 'b', 'c')
+		>> 5 4 'a' 'b' 'c'
+	array.lengfth = 2
+	RESULT: 5, 4
+		new length = 12
+e.g.accessor methods (arrays are not modified) -> but returns a value
+	- indexof
+	- find
+e.g.iterators - to step through elements one by one and do something
+		|
+		-> argument passed in a function -	RETURN value
+										 -  index
+										 -  array
+	array.forEach(function(element, index, array){
+		console.log(element);
+	}
+	array.every
+	array.something
+	array.filter
+	
+	a = [1, 2, 3, 4, 5, 6, 7, 8]
+	a.map (v = > v * 2)
+		|-> same as
+			function (v) {
+				return v*2
+			}
+
+
+- without iterators,
+	res = []
+	for (i = 0; i < a.length; i++){
+		+ = a[i] * 2
+		res.push(t);
+	}
+	return res
+- to take only even numbers
+	a.filter (v = > v % 2 == 0)
+	RESULT: [2, 4, 6, 8]
+- odd
+	a.filter(v => v % 1 == 0)
+	RESULT: [1, 3, 5, 7]
+- indeces which are divisble by 3
+	a.filter ((v, i) => i % 3 == 0)
+	RESULT: [1, 4, 7]
+- indeces divisible by 3 and preceeding element is 3
+	a.filter((v,i,a) => i % 3 == 0 && a[i-1] == 3)
+	RESULT: [4]
+- calculate sum of elements
+	a.reduce((acc, v) => acc += v)
+	RESULT: 36
+- accumulator starts from some value
+	a.reduce ((acc, v) => acc += v, 10)
+	RESULT: 46						|-> accumulator starts from 10
+- every - check every element
+	example: a.every (v => v > 0)
+			RESULT: true
+- some
+	a.some(v=> v % 2 == 0)
+	RESULT: true
+- findIndex
+- forEach
+- keys
+- entries
+- map
+- reduce
+- reduceRight
+- values

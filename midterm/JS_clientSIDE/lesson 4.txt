@@ -1,0 +1,30 @@
+B.
+- standard/core objects (structure types)
+Array, Boolean, Date, Error, Function, JSON, Math, Number, Object, RegExp, String, Set, WeakMap, Weakest
+* in js, everything is an object (?)
+
+'hello'.length >> 5
+'hello'.toUpperCase >> "HELLO"
+'hello.substr(2) >> "llo"
+			  |-> starting character
+s = "hello"
+String.prototype.reverse = function{
+	var rev = ' '
+	for (let i = this.length - 1; i >= 0; i--){
+		rev += this.charAt(i);
+	}
+	return rev
+}
+'hello'.reverse()
+RESULT: "olleh"
+
+Math.Pi >> 3.1415...
+Math.floor(1.2) >> 1 (smallest # smaller than 1.2)
+Math.ceil(1.2) >> 2 (smallest # larger than 1.2)
+Math.random() >> 0.316549
+
+d =  new Date()
+d.getHous()
+d.getMonth() - zero based (Jan = 0)
+d.setYear()
+d.getTime() - milliseconds from January 1, 1970

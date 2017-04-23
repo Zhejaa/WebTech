@@ -1,0 +1,106 @@
+function - abstraction for a code block (alaways has return value)
+e.g.function sayHello(parameter) {		\
+		console.log('hello'}; <- body		 > block
+	}									/
+	to invoke: sayHello()
+e.g.function saySomething (something){
+		console.log(something);
+	}
+	to use: saySomething (something){
+		console.log(something};
+	}
+	to use: saySomething('hi') >> 'hi'
+			saySomething(100)  >> 100
+e.g.function greater(v1, v2){
+		if (v1 > v2){
+			return v1;
+		} else if (v2 > v1){
+			return v2;
+		}
+	}
+	to invoke: 	greater(10, 20)	>> 20
+				greater('a', 'b') >> "b"
+				greater('a', 'A') >> "a"
+				greater(true, false) >> true
+				greater([], {}) >>
+e.g.functions can eturn any type of value
+	function fn(arg){
+		switch(arg){
+			case 0: return true;
+			case 1: return 100;
+			case 2: return 'hello';
+			case 3: return [1, 2, 3];
+			case 4: return {name: 'Ako', age: 10}
+			case 5: return function (num){	\
+							return num * 2	 > anonymous function
+					}						/
+		}
+	}
+e.g.function expression (if the function will only be used once)
+	(function (a, b) {return a+b;})(10, 20);
+	RESULT: 30
+	*To avoid name conflicts
+e.g.var add = new Function ('a, b', 'return a+b')
+	var sum = add (10, 20);
+	functions are executable code,
+	they can be assigned to variables
+e.g.aonymous function syntax
+	var subtract = function(a, b){
+		return a-b;
+		}
+	var difference = subtract (10, 20);
+e.g.arrow syntax
+	var multiply = (a, b) => {return a * b;}
+	var product = multiply(10, 20)
+	if functions only have one argument, () can be ommitted
+	var triple = n => 3 * n;
+	var thrice = triple(5);
+e.g.functions can be recursive
+	function factorial(b){
+		if (n < 0){
+			throw "invalid argument.";
+			}else if (n==0){
+				return 1;
+			}else{
+				return n*factorial (n-1);
+			}
+		}
+	}
+e.g.functions can be nested
+	function outer(){
+		//some code...
+		function inner(){
+			//inner code...
+		}
+		//some more code...
+	}
+e.g.execution context object - 'this', 'arguments' 	-> can be used if arguments have no names
+													-> like an array
+	function args(){
+		console.log(this);
+		console.log(arguments.length);
+		for (let i = 0; i < arguments.length; i++){
+			total += arguments;
+		}
+		return total;
+	}
+	possible invokations:	sum(1, 2)
+							sum(1, 2, 3, 4, 5, 6, 7, 8, 9)
+e.g.function arguments can have default values
+	function fn (a=10, b=20, c, d=40, e){
+		console.log ('a = ${a}');
+		console.log ('b = ${b}');
+		console.log ('c = ${c}');
+		console.log ('d = ${d}');
+		console.log ('e = ${e}');
+	}
+e.g.functions can have rest parameters
+	function fn(a, b... others){
+		console.log('a = ${a}');
+		console.log('b = ${b}');
+		console.log('others = ', others);
+	}
+	try:	fn(1, 2, 3, 4, 5)
+			RESULT: a = 1
+					b = 2
+					others = 3, 4, 5
