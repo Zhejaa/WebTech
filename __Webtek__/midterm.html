@@ -643,7 +643,17 @@
                                     <h4 class="title">CSS Statements</h4>
                                 </div>
                                 <div id="Demo12" class="hide content">
-                                    <p> text ..</p>
+                                <p>A statement is a building block that begins with any non-space characters and ends at the first closing brace or semi-colon
+									(outside a string, non-escaped and not included into another {}, () or [] pair).</p>
+								<p>Two kinds of statements:</p>
+								<ul>
+									<li>At-rules that start with an at sign, '@' (U+0040 COMMERCIAL AT), followed by an identifier and then continuing up the end
+									of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of 
+									at-rules, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey 
+									meta-data information (like @charset or @import), conditional information (like @media or @document), or descriptive 
+									information (like @font-face).</li>
+									<li>Rulesets (or rules) that, as seen, associate a collection of CSS declarations to a condition described by a selector.</li>
+								</ul>
                                 </div>
                             </div>
                         </div>
@@ -656,7 +666,93 @@
                                     <h4 class="title">CSS Selectors</h4>
                                 </div>
                                 <div id="Demo13" class="hide content">
-                                    <p> text ..</p>
+									<p>Selectors define to which elements a set of CSS rules apply.</p>
+									<h4>Basic Selectors</h4>
+									
+										<h5>Type selectors</h5>
+										
+											<p>This basic selector chooses all elements that matches the given name.</p>
+											
+											<p>Syntax: eltname</p>
+											
+											<p>Example: input will match any input element.</p>
+											
+										<h5>Class selectors</h5>
+										
+											<p>This basic selector chooses elements based on the value of their class attribute.</p>
+											
+											<p>Syntax: .classname</p>
+											
+											<p>Example: .index will match any element that has the class index (likely defined by a class="index" attribute or similar).</p>
+							
+										<h5>ID selectors</h5>
+										
+											<p>This basic selector chooses nodes based on the value of its id attribute. There should be only one element with a given ID in a document.</p>
+											
+											<p>Syntax: #idname</p>
+											
+											<p>Example: #toc will match the element that has the id toc (likely defined by a id="toc" attribute or similar).</p>
+											
+										<h5>Universal selectors</h5>
+										
+											<p>This basic selector chooses all nodes. It also exists in a one-namespace only and in an all-namespace variant too.</p>
+											
+											<p>Syntax: * ns|* *|*</p>
+											
+											<p>Example: * will match all the elements of the document.</p>
+											
+										<h5>Attribute selectors</h5>
+										
+											<p>This basic selector chooses nodes based on the value of one of its attributes.</p>
+											
+											<p>Syntax: [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</p>
+											
+											<p>Example: [autoplay] will match all the elements that have the autoplay attribute set (to any value).</p>
+											
+									<h4>Combinators</h4>
+									
+										<h5>Adjacent sibling selectors</h5>
+										
+											<p>The '+' combinator selects nodes that immediately follow the former specified element.</p>
+											
+											<p>Syntax: A + B</p>
+											
+											<p>Example: div + p will match any p that immediately follows a div.</p>
+						
+										<h5>General sibling selectors</h5>
+										
+											<p>The '~' combinator selects nodes that follow (not necessarily immediately) the former specified element, if both elements shared the same parent.</p>
+											
+											<p>Syntax: A ~ B</p>
+											
+											<p>Example: p ~ span will match all span elements that follow a p element inside the same element.</p>
+											
+										<h5>Child selectors</h5>
+										
+											<p>The '>' combinator selects nodes that are direct children of the former specified element.</p>
+											
+											<p>Syntax: A > B</p>
+											
+											<p>Example: ul > li will match all li elements that are inside a ul element.</p>
+										
+										<h5>Descendant selectors</h5>
+										
+											<p>The ' ' combinator selects nodes that are children (not necessary direct children) of the former specified element.</p>
+											
+											<p>Syntax: A B</p>
+											
+											<p>Example: div span will match any span element that is inside a div element.</p>
+											
+									<h4>Pseudo-elements</h4>
+									
+										<p>Pseudo-elements are abstractions of the tree representing entities beyond what HTML does. For example, HTML doesn't have
+										an element describing the first letter or line of a paragraph, or the marker of a list. Pseudo-elements represent these
+										entities and allow CSS rules to be associated with them. that way, these entitities can be styled independently.</p>
+										
+									<h4>Pseudo-classes</h4>
+									
+										<p>Pseudo-classes allow to select elements based on information that is not contained in the document tree like a state
+										or that is particularly complex to extract. E.g. they match if a link has been previously visited or not.</p>
                                 </div>
                             </div>
                         </div>
@@ -668,8 +764,24 @@
                                 <div class="header">
                                     <h4 class="title">CSS Rule Precedence</h4>
                                 </div>
-                                <div id="Demo14" class="hide content">
-                                    <p> text ..</p>
+                                <div id="Demo14" class="hide content">                                
+									<ul><b>By origin and importance</b>
+										<li>User agent important declarations
+										<li>User important declarations
+										<li>Author important declarations
+										<li>Author normal declarations
+										<li>User normal declarations
+										<li>User agent normal declarations
+									</ul>
+									<ul><b>By specificity</b>
+										<li>Inline style
+										<li>Number of ID selectors
+										<li>Number of class selectors, attribute selectors and pseudo-classes
+										<li>Number of type selector and pseudo-elements
+									</ul>
+									<ul><b>By order</b>
+										<li>The last one will become first
+									</ul>
                                 </div>
                             </div>
                         </div>
@@ -679,11 +791,41 @@
                         <div class="col-xs-12">
                             <div class="card" onclick="myFunction('Demo15')">
                                 <div class="header">
-                                    <h4 class="title">CSS Declaration</h4>
+                                    <h4 class="title">CSS Declaration Block</h4>
                                 </div>
                                 <div id="Demo15" class="hide content">
-                                    <p> text ..</p>
-                                </div>
+                                    <h4>Properties</h4>
+									<ul>
+										<li>Shorthand properties</li>
+										<li>Vendor - specific extensions</li>
+									</ul>
+							
+									<h4>Values</h4>
+							
+									<ul>
+										<li>Keyboards</li>
+										<li>Numbers</li>
+										<li>Dimensions</li>
+											<ul>
+												<li>length, angle, duration, frequency, and resolution.</li>
+												<li>length units</li>
+													<ul>
+													<li>font-relative: em, ex, ch, rem.</li>
+													<li>viewport-percentage: vw, ch, vmin, vmax.</li>
+													<li>absolute lengths: cm, mn, q, int, pc, px.</li>
+												</ul>
+												<li>angle units: dey, grad, rad, turn.</li>
+												<li>duration units: s, ms.</li>
+												<li>frequency units: hz, khz.</li>
+												<li>resolution units: dpi, dpcm, dppx.</li>
+											</ul>
+										<li>Percentages</li>
+										<li>URL and URI</li>
+										<li>Colors</li>
+										<li>String</li>
+										<li>Functions: calc(), attr(), counters(), linear-gradient(), radial-gradient(), translate(), scale(), rotate(), and etc.</li>
+									</ul>
+											</div>
                             </div>
                         </div>
                     </div>   
