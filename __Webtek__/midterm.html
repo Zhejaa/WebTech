@@ -858,7 +858,66 @@
                                     <h4 class="title">Lesson 1</h4>
                                 </div>
                                 <div id="Demo17" class="hide content">
-                                    <p> text..</p>
+                                        <h3>Client-side scripting - for interfactivity</h3>
+                                                <li>querySelector only returns first match (single value)
+                                                example:
+                                                querySelector(#p)
+                                                RESULT: &lt;p id = "p"&gt; hello /&gt;
+                                                querySelectorAll returns all matches
+                                                <li>document.body.matches('html > *')
+                                                RESULT: true
+                                                EXPLANATION: html > * : all child nodes of HTML
+                                                <li>querySelectorAll returns all matches
+                                                example:
+                                                querySelectorAll ('p')
+                                                RESULT: [p#p]
+                                                <li>p.textContent = 'webtek'
+                                                RESULT: "webtek"
+                                                <li> p.nodeValue
+                                                RESULT: #null (always!)
+                                                - p.nodeName
+                                                RESULT: #text
+                                                <li>p.lang = 'en-US'
+                                                RESULT: "en-US"
+                                                <li>p.setAttribute
+                                                <li>p.getAttribute
+                                                <li>p.style = 'color: black'
+                                                RESULT: "color: black"
+                                                <li>p.style.color = '#ff0ff'
+                                                RESULT: '#ff0ff'
+                                                <li>p.style.bottomBorderColor
+                                                move UP : parentNode
+                                                move DOWN : childNode
+                                                move SIDEWARDS : nextSibling // previousSibling
+                                            <ul>
+                                                <li>whitespaces are read as text</li>
+                                                <li>comments are read as comments</li>
+                                            </ul>
+                                                <li>document.body.parentNode - always returns the parent
+                                                <li>document.body.parentElement - can return null
+                                                <li>document.body.children - returns elements only
+                                                <li>document.body.childNodes - return everything (i.e. element, comment, whitepace)
+                                                <li>h1 = document.createElement('h1')
+                                                RESULT: "&lt;h1&gt;&lt;h1&gt;"
+                                                <li>h1 = document.createElement('h1')
+                                                RESULT: "&lt;h1&gt;&lt;h1&gt;"
+                                                <li>document.body.appendChild(h1)
+                                                RESULT: "&lt;h1&gt;&lt;h1&gt;"
+                                                <li>t = document.createTextNode('hi')
+                                                    <p>h1.appendChild(+)
+                                                    <p>t2.document.createTextNode('hello')
+                                                    <p>h1.insertBefore(t2, +)
+                                                    <p>var t3 = document.createTextNode('pamalit')
+                                                    <p>h1.replaceChild(t3, t)
+                                                    <p>h1.removeChild(t2)
+                                                    <p>h1.cloneNode
+                                                    <p>h2 = h1.cloneNode(true)
+                                                    <p>var b = document.body.cloneNode(true)
+                                                <p>RESULT: undefined
+                                                <p>- b
+                                                <p>RESULT: &lt;body&gt;..&lt;/body&gt; ~entire body
+                                                <li>document.importNode (this is similar to clone)
+                                                <li>document.adoptNode (transfers the node and removes the original node)
                                 </div>
                             </div>
                         </div>
@@ -871,7 +930,25 @@
                                     <h4 class="title">Lesson 2</h4>
                                 </div>
                                 <div id="Demo18" class="hide content">
-                                    <p> text..</p>
+                                    <h3>Programmatic constructs</h3>
+                                        <ul><li>DOM is NOT a part of javaScript
+                                        functionalities:
+                                        Javascript is an impeerative programming language
+                                            <ul>
+                                                <li>dynamically type language
+                                                <li>data types are not explicitly defined
+                                            </ul>
+
+                                            <li>ECMA Script 5
+                                                <ul>
+                                                        <li>variables:
+                                                    <ul>
+                                                        <li>var - variables with a 'var' keyword becomes a global variable
+                                                        <li>let - Separate variable, doesn't introduce global property of window
+                                                        <li>const - Declares a read-only named constant.
+                                                    </ul>
+                                                </ul>
+                                        </ul>
                                 </div>
                             </div>
                         </div>
@@ -884,7 +961,50 @@
                                     <h4 class="title">Lesson 3</h4>
                                 </div>
                                 <div id="Demo19" class="hide content">
-                                    <p> text..</p>
+                                    <h3>Data Types in JavaScript</h3>
+                                        <ul>
+                                            <li>Simple/Primitive
+                                                <ul>
+                                                    <li>Boolean
+                                                        <ul>
+                                                            <li>truthy - Strings are true / Non-empty string
+                                                            <li>falsy - No character is false / empty string/undefined/null
+                                                        </ul>
+                                                    <li>Number
+                                                        <ul>
+                                                            <li>Decimal
+                                                            <li>Binary
+                                                            <li>Octal
+                                                            <li>Hexadecimal
+                                                            <li>Scientific notation
+                                                        </ul>
+                                                    <li>Strings
+                                                        <ul>
+                                                            <li>Single quotes
+                                                            <li>Double quotes
+                                                        </ul>
+                                                    <p>*There is no char type in JavaScript</p>	
+                                                    <li>Undefined & null
+                                                </ul>
+                                            <li>Standard / object
+                                                <ul>
+                                                    <li>Array
+                                                    <li>Boolean
+                                                    <li>Date
+                                                    <li>Error
+                                                    <li>Function
+                                                    <li>JSON
+                                                    <li>Math
+                                                    <li>Number
+                                                    <li>Object
+                                                    <li>RegExp
+                                                    <li>String
+                                                    <li>Map
+                                                    <li>Set
+                                                    <li>Weak Map
+                                                    <li>Weak Set
+                                                </ul>
+                                        </ul>
                                 </div>
                             </div>
                         </div>
