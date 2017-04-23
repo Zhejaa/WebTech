@@ -1,0 +1,66 @@
+<html>
+<body>
+<h1>Client-side scripting - for interfactivity</h1>
+<li>querySelector only returns first match (single value)
+example:
+querySelector(#p)
+RESULT: &lt;p id = "p"&gt; hello /&gt;
+querySelectorAll returns all matches
+<li>document.body.matches('html > *')
+RESULT: true
+EXPLANATION: html > * : all child nodes of HTML
+<li>querySelectorAll returns all matches
+example:
+querySelectorAll ('p')
+RESULT: [p#p]
+<li>p.textContent = 'webtek'
+RESULT: "webtek"
+<li> p.nodeValue
+RESULT: #null (always!)
+- p.nodeName
+RESULT: #text
+<li>p.lang = 'en-US'
+RESULT: "en-US"
+<li>p.setAttribute
+<li>p.getAttribute
+<li>p.style = 'color: black'
+RESULT: "color: black"
+<li>p.style.color = '#ff0ff'
+RESULT: '#ff0ff'
+<li>p.style.bottomBorderColor
+move UP : parentNode
+move DOWN : childNode
+move SIDEWARDS : nextSibling // previousSibling
+	<ul>
+		<li>whitespaces are read as text</li>
+		<li>comments are read as comments</li>
+	</ul>
+</li>
+<li>document.body.parentNode - always returns the parent
+<li>document.body.parentElement - can return null
+<li>document.body.children - returns elements only
+<li>document.body.childNodes - return everything (i.e. element, comment, whitepace)
+<li>h1 = document.createElement('h1')
+RESULT: "&lt;h1&gt;&lt;h1&gt;"
+<li>h1 = document.createElement('h1')
+RESULT: "&lt;h1&gt;&lt;h1&gt;"
+<li>document.body.appendChild(h1)
+RESULT: "&lt;h1&gt;&lt;h1&gt;"
+<li>t = document.createTextNode('hi')
+	<p>h1.appendChild(+)
+	<p>t2.document.createTextNode('hello')
+	<p>h1.insertBefore(t2, +)
+	<p>var t3 = document.createTextNode('pamalit')
+	<p>h1.replaceChild(t3, t)
+	<p>h1.removeChild(t2)
+	<p>h1.cloneNode
+	<p>h2 = h1.cloneNode(true)
+	<p>var b = document.body.cloneNode(true)
+<p>RESULT: undefined
+<p>- b
+<p>RESULT: &lt;body&gt;..&lt;/body&gt; ~entire body
+<li>document.importNode (this is similar to clone)
+<li>document.adoptNode (transfers the node and removes the original node)
+</body>
+
+</html>
