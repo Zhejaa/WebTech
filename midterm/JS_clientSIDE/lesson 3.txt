@@ -1,0 +1,31 @@
+data types:
+A. SIMPLE/PRMITIVE
+B. REFERENCE/OBJECT
+
+A.
+- boolean - for controlling conditional statements
+EXAMPLE
+b = false
+typeof b (RESULT: "boolean")
+'falsy' - undefined is false (values not defined)
+		- example is value '0' (everything else is true)
+'truey' - example is String 'hello' (null values are false)
+		- empty values are false
+		- example: while (1){} <- infinite loop
+- numbers	- can be in decimal, binary (prefix 0b), octal (prefix 0),
+			hexadecimal (prefix 0x), scientific notation, floating point
+			- alwars floating point division
+- strings 	- single quote or  double quotes can be used
+			EXAMPLE:	"cam't", 'can't', 'abc", "def', 'can\'t' -> RESULT: "can't"
+	template literal:
+	e.g.	'abc
+			def
+			ghi' -> back pick(?)
+			RESULT:	"abc
+					def
+					ghi"
+	string interpolation:
+	e.g.	'price: ${a}'
+			RESULT:
+			price: 100
+- undefined is different from null

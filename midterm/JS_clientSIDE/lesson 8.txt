@@ -1,0 +1,46 @@
+OBJECTS (Prototype Object Orientation)
+
+var emptyObj = new Object();
+var alsoEmptyObject = {};
+-> RESULT: Object {}
+
+e.g.
+var student = {}
+student.idno = '2155912'
+student['name'] = 'Juan Dela Cruz';
+Student.toString = function() {
+	return '$ {this.idno}: ${this.name}
+}
+> Student.toString()
+< 2155912 :
+
+JSON -  converts objects into a string representation
+		JSON.stringify(Student)
+		RESULT: "{"id no": "2155912", "name" : "Juan Dela Cruz"}"
+		localStorage.setItem('2155912', JSON.stringify(student))
+		o = JSON.parse(student)
+		> o
+		< Object: "{idno: 2155912, name: Juan Dela Cruz}"
+		
+		- typeOf
+		- instanceOf
+		
+constructor function - use 'new' keyword
+function Peson (name, age){
+	this.name = name;
+	this.age = age;
+	this.speak = function(){
+		console.log('Hello! I'm ${this.name}.');
+	}
+}
+
+var p = new Person ('Britney', '21');
+p instanceOf Person
+	RESULT: true
+p1 = {"name" : "ikaw", age: 100}
+p1 instance of Person
+	RESULT: false
+p1 instanceOf Object
+	RESULT: true
+p2 = Person ('askdkj', 1000)
+	RESULT: undefined

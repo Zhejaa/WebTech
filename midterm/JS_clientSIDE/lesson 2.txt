@@ -1,0 +1,68 @@
+programmatic constructs (javaScript)
+- DOM is NOT a part of javaScript
+functionalities:
+Javascript is an impeerative programming language
+-> dynamically type language
+> var a = 100
+> typeOF a
+RESULT: "number"
+-> data types are not explicitly defined
+ECMA Script 5
+variables:
+a. var 	- variables with a 'var' keyword becomes a global variable
+b. let 	- variable only exists within the block (similar since i is only accessible in the for-loop where it was instantiated)
+		- veriable is NOT associated w/ windows -> for (int i){}
+c. const - new values can  NOT be changed
+		- doesn't introduct a global property of the variable
+e.g.	a = 100
+		RESULT: 100
+		window.a
+		RESULT: 100
+(1)
+var a = 10;
+function f(){
+	var a = 20;
+	console.log(a);
+	{
+		var a = 30;
+		console.log(a);
+	}
+		console.log(a);
+}
+RESULT:
+f():	10
+		20
+		30
+		
+(2)
+let a = 10;
+function f(){
+	let a = 20;
+	console.log(a);
+	{
+		let a = 30;
+		console.log(a);
+	}
+	console.log(a);
+}
+RESULT
+f():	20
+		30
+		20
+		
+(3)
+const a = 10;
+function f(){
+	const a = 20;
+	console.log(a);
+	{
+	const a = 30;
+	console.log(a);
+	}
+	console.log(a);
+}
+RESULT:
+f():	20
+		30
+		20
+		

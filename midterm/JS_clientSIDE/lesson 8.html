@@ -1,0 +1,52 @@
+<html>
+	<h1>OBJECTS (Prototype Object Orientation)</h1>
+	<ul>
+		<li>var emptyObj = new Object();
+		<li>var alsoEmptyObject = {};
+		<li>-> RESULT: Object {}
+	</ul>
+	<ul>
+		<li>e.g.
+		<li>var student = {}
+		<li>student.idno = '2155912'
+		<li>student['name'] = 'Juan Dela Cruz';
+		<li>Student.toString = function() {
+		<li>return '$ {this.idno}: ${this.name}
+		<li>}
+		<li>> Student.toString()
+		<li>< 2155912 :
+	</ul>
+	<ul>JSON -  converts objects into a string representation
+		<li>JSON.stringify(Student)
+		<li>RESULT: "{"id no": "2155912", "name" : "Juan Dela Cruz"}"
+		<li>localStorage.setItem('2155912', JSON.stringify(student))
+		<li>o = JSON.parse(student)
+		<li>> o
+		<li>< Object: "{idno: 2155912, name: Juan Dela Cruz}"
+		<li>
+		<li>- typeOf
+		<li>- instanceOf
+	</ul>
+	<ul>	
+		<li>constructor function - use 'new' keyword
+		<li>function Peson (name, age){
+		<li>this.name = name;
+		<li>this.age = age;
+		<li>this.speak = function(){
+		<li>console.log('Hello! I'm ${this.name}.');
+		<li>}
+		<li>}
+	</ul>
+	<ul>
+		<li>var p = new Person ('Britney', '21');
+		<li>p instanceOf Person
+		<li>&nbsp;&nbsp;RESULT: true
+		<li>p1 = {"name" : "ikaw", age: 100}
+		<li>p1 instance of Person
+		<li>&nbsp;&nbsp;RESULT: false
+		<li>p1 instanceOf Object
+		<li>&nbsp;&nbsp;RESULT: true
+		<li>p2 = Person ('askdkj', 1000)
+		<li>&nbsp;&nbsp;RESULT: undefined
+	</ul>
+</html>

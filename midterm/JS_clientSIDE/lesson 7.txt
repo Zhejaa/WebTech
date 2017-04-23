@@ -1,0 +1,30 @@
+Mutator methods
+- fill
+- push - add elements and increase length	\
+											 > STACK
+- pop - remove last element and return value/
+- shift - remove first element and shift	\
+											 > QUEUE
+- unshift - insert an element at the first	/
+			position and shift
+- sort - sort elements of the array
+		a.sort() - normal sort
+		a.sort (function (e1, e2)) - return -1, 0, 1
+e.g.var fruits = ['apple', banna, watermelon, kiwi]
+	fruit.sort() - alphabetical
+	fruits.sort((v1, v2) => Math.sign(v1.length - v2.length));
+- splice - add/remove element from an array
+e.g.fruits.splice(2, 1) -> starting from index 2, remove 1 element
+	fruits.splice(2, 1, 1, 2, 3, 4) <- add after removing 1 element startng from index 2
+- reverse
+- peel
+
+Accessor methods
+- concat
+	e.g. a.concat(b)
+- split - will produce an array
+- join
+	e.g.
+	var str = 'saint louis university';
+	var rts = str.split('').reverse().join('');
+	RESULT: reverse of slu

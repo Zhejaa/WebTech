@@ -1,0 +1,69 @@
+Client-side scripting - for interfactivity
+- querySelector only returns first match (single value)
+example:
+querySelector(#p)
+RESULT: <p id = "p"> hello </p>
+querySelectorAll returns all matches
+
+- querySelectorAll returns all matches
+example:
+querySelectorAll ('p')
+RESULT: [p#p]
+
+- document.body.matches('html > *')
+RESULT: true
+EXPLANATION: html > * : all child nodes of HTML
+
+- p.textContent = 'hi'
+RESULT: "hi"
+
+- p.nodeValue
+RESULT: #null (always!)
+- p.nodeName
+RESULT: #text
+- p.nodeType
+(numeric - result: 3, constant in DOM)
+
+<a href = ' '> link </a>
+
+- p.lang = 'en-US'
+RESULT: "en-US"
+- p.setAttribute
+- p.getAttribute
+- p.style = 'color: blue'
+RESULT: "color: blue"
+- p.style.color = '#0ff'
+RESULT: '#0ff'
+- p.style.bottomBorderColor
+move UP : parentNode
+move DOWN : childNode
+move SIDEWARDS : nextSibling // previousSibling
+whitespaces are read as text
+comments are read as comments
+- document.body.childNodes - return everything (i.e. element, comment, whitepace)
+- document.body.children - only returns elements
+- document.body.parentNode - always returns the parent
+- document.body.parentElement - can return null
+- p.innerHTML
+insert	\			/ remove
+		>CHILDREN <
+replace	/			\ append - add to the end
+- h1 = document.createElement('h1')
+RESULT: "<h1><h1>"
+- document.body.appendChild(h1)
+RESULT: "<h1></h1>"
+- t = document.createTextNode('hi')
+- h1.appendChild(+)
+- t2.document.createTextNode('hello')
+- h1.insertBefore(t2, +)
+- var t3 = document.createTextNode('pamalit')
+- h1.replaceChild(t3, t)
+- h1.removeChild(t2)
+- h1.cloneNode
+- h2 = h1.cloneNode(true)
+- var b = document.body.cloneNode(true)
+RESULT: undefined
+- b
+RESULT: <body>..</body> ~entire body
+- document.importNode (similar to clone)
+- document.adoptNode (transfer nodes, original disappears)
